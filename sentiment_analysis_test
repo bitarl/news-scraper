@@ -1,0 +1,16 @@
+# Import the analyze_sentiment function from the main script
+from web_scrape import analyze_sentiment
+
+# Sample data for testing sentiment analysis
+sample_data = [
+    "I love this product! It's amazing.",
+    "This movie was terrible. I hated it.",
+    "The weather today is neither good nor bad.",
+    "The news of offloading staff comes after a turbulent few weeks for Tesla and Elon Musk",
+]
+
+# Perform sentiment analysis on each sample data
+print("Sentiment Analysis Results:")
+for idx, text in enumerate(sample_data, start=1):
+    sentiment_label, sentiment_polarity = analyze_sentiment(text)
+    print(f"Sample {idx}: '{text}' (Sentiment: {sentiment_label}, Polarity: {sentiment_polarity:.2f})")
